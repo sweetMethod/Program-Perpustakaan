@@ -1,0 +1,47 @@
+
+.bodybg1{
+    -fx-background-image: url('/icon/kun.png');
+    -fx-background-size: 100% 100%;
+}
+
+.bodybg2{
+    -fx-background-image: url('/icon/peminjaman.png');
+    -fx-background-size: 100% 100%;
+}
+
+.bodybg3{
+    -fx-background-image: url('/icon/pengembalian.png');
+    -fx-background-size: 100% 100%;
+}
+
+.bodybg4{
+    -fx-background-image: url('/icon/tambah.png');
+    -fx-background-size: 100% 100%;
+}
+
+.bodybg5{
+    -fx-background-image: url('/icon/databuku.png');
+    -fx-background-size: 100% 100%;
+}
+
+.bodybg6{
+    -fx-background-image: url('/icon/laporan.png');
+    -fx-background-size: 100% 100%;
+}
+
+.bodyback
+{
+    -fx-background-image: url('/icon/back.png');
+    -fx-background-size: 100% 100%;
+}
+
+.bodyinfo
+{
+    -fx-background-image: url('/icon/info1.png');
+    -fx-background-size: 100% 100%;
+}
+.bodylogout
+{
+    -fx-background-image: url('/icon/keluar2.png');
+    -fx-background-size: 100% 100%;
+}

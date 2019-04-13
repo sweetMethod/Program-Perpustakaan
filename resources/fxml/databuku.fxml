@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="/css/bgGambar.css" fx:controller="perpustakaan.controllers.BukuController">
+   <children>
+      <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5C8ECE;" >
+               <children>
+                  <JFXButton fx:id="back" focusTraversable="false" layoutX="14.0" layoutY="16.0" onAction="#back" styleClass="bodyback" text=" " />
+                  <Text fill="WHITE" layoutX="41.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Buku" textAlignment="CENTER">
+                     <font>
+                        <Font name="Bebas Neue Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXTreeTableView fx:id="tableView" focusTraversable="false" layoutX="14.0" layoutY="14.0" onMousePressed="#mousePressedHandle" prefHeight="400.0" prefWidth="478.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXTreeTableView>
+                  <JFXTextField fx:id="nomorField" focusColor="#5c8ece" labelFloat="true" layoutX="503.0" layoutY="140.0" opacity="0.5" prefHeight="25.0" prefWidth="200.0" promptText="Masukan Nomor Buku" />
+                  <JFXButton fx:id="simpanButton" buttonType="RAISED" defaultButton="true" layoutX="500.0" layoutY="370.0" onAction="#simpanBuku" style="-fx-background-color: #5c8ece;" text="Simpan" textFill="WHITE" />
+                  <JFXButton fx:id="editButton" buttonType="RAISED" disable="true" layoutX="566.0" layoutY="370.0" onAction="#editBuku" style="-fx-background-color: #5c8ece;" text="Edit" textFill="WHITE" />
+                  <JFXButton fx:id="hapusButton" buttonType="RAISED" disable="true" layoutX="613.0" layoutY="370.0" onAction="#hapusBuku" style="-fx-background-color: #5c8ece;" text="Hapus" textFill="WHITE" />
+                  <JFXTextField fx:id="judulField" focusColor="#5c8ece" labelFloat="true" layoutX="503.0" layoutY="178.0" opacity="0.5" prefHeight="25.0" prefWidth="200.0" promptText="Masukan Judul Buku" />
+                  <JFXTextField fx:id="pengarangField" focusColor="#5c8ece" labelFloat="true" layoutX="503.0" layoutY="218.0" opacity="0.5" prefHeight="25.0" prefWidth="200.0" promptText="Masukan Pengarang  Buku" />
+                  <JFXTextField fx:id="penerbitField" focusColor="#5c8ece" labelFloat="true" layoutX="503.0" layoutY="259.0" opacity="0.5" prefHeight="25.0" prefWidth="200.0" promptText="Masukan Penerbit  Buku" />
+                  <JFXTextField fx:id="jmlField" focusColor="#5c8ece" labelFloat="true" layoutX="503.0" layoutY="297.0" opacity="0.5" prefHeight="25.0" prefWidth="200.0" promptText="Masukan Jumlah  Buku" />
+                  <JFXButton fx:id="buttonBatal" buttonType="RAISED" layoutX="724.0" layoutY="370.0" onAction="#batalButtton" style="-fx-background-color: #5c8ece;" text="Batal" textFill="WHITE" />
+                  <JFXButton layoutX="673.0" layoutY="370.0" onAction="#printButton" style="-fx-background-color: #5c8ece;" text="Print" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="/css/bgGambar.css" fx:controller="perpustakaan.controllers.AnggotaController">
+    <children>
+        <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5C8ECE;">
+                    <children>
+                        <JFXButton fx:id="back" focusTraversable="false" layoutX="14.0" layoutY="16.0" onAction="#back" styleClass="bodyback" text=" " />
+                        <Text fill="WHITE" layoutX="41.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Anggota" textAlignment="CENTER">
+                            <font>
+                                <Font name="Bebas Neue Bold" size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXTreeTableView fx:id="table_anggota" focusTraversable="false" layoutX="14.0" layoutY="14.0" onMousePressed="#mousePressedHandle" prefHeight="400.0" prefWidth="371.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXTreeTableView>
+                  <JFXTextField fx:id="text_Namasiswa" focusColor="#5c8ece" labelFloat="true" layoutX="399.0" layoutY="133.0" opacity="0.5" prefHeight="25.0" prefWidth="200.0" promptText="Masukan Nama Siswa" />
+                  <JFXTextField fx:id="text_Kelas" focusColor="#5c8ece" labelFloat="true" layoutX="620.0" layoutY="133.0" opacity="0.5" promptText="Masukan Kelas" />
+                  <JFXButton fx:id="buttonSimpan" buttonType="RAISED" layoutX="406.0" layoutY="214.0" onAction="#simpanAnggota" style="-fx-background-color: #5c8ece;" text="Simpan" textFill="WHITE" />
+                  <JFXButton fx:id="buttonEdit" buttonType="RAISED" disable="true" layoutX="480.0" layoutY="214.0" onAction="#editAnggota" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #5c8ece;" text="Edit" textFill="WHITE" />
+                  <JFXButton fx:id="buttonHapus" buttonType="RAISED" disable="true" layoutX="553.0" layoutY="214.0" onAction="#hapusAnggota" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #5c8ece;" text="Hapus" textFill="WHITE" />
+                  <JFXButton fx:id="buttonBatal" layoutX="708.0" layoutY="214.0" onAction="#batalAnggota" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #5c8ece;" text="Batal" textFill="WHITE" />
+                  <JFXButton fx:id="buttonPrint" disable="true" layoutX="632.0" layoutY="214.0" onAction="#printAnggota" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #5c8ece;" text="Print" textFill="WHITE" />
+               </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" stylesheets="/css/bgGambar.css" fx:controller="perpustakaan.controllers.PengembalianController">
+    <children>
+        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5C8ECE;">
+                    <children>
+                        <JFXButton fx:id="back" focusTraversable="false" layoutX="14.0" layoutY="16.0" onAction="#back" styleClass="bodyback" text=" " />
+                        <Text fill="WHITE" layoutX="41.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengembalian Buku" textAlignment="CENTER">
+                            <font>
+                                <Font name="Bebas Neue Bold" size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="542.0">
+               <children>
+                  <JFXTreeTableView fx:id="peminjamanTableView" layoutX="41.0" layoutY="71.0" onMousePressed="#mousePressedHandle" prefHeight="305.0" prefWidth="186.0">
+                     <effect>
+                        <DropShadow />
+                     </effect></JFXTreeTableView>
+                  <JFXTextField fx:id="idAnggotaField" focusColor="#5c8ece" labelFloat="true" layoutX="41.0" layoutY="27.0" onKeyPressed="#keyPressedHandle" prefHeight="25.0" prefWidth="186.0" promptText="Id Anggota" />
+                  <GridPane layoutX="253.0" layoutY="25.0" prefHeight="215.0" prefWidth="300.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="153.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="103.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Id Peminjaman" GridPane.rowIndex="1" />
+                        <Label text="Nomor Buku" GridPane.rowIndex="2" />
+                        <Label text="Judul Buku" GridPane.rowIndex="3" />
+                        <Label text="Tanggal Peminjaman" GridPane.rowIndex="4" />
+                        <Label fx:id="idPeminjamanLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="nomorBukuLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="judulBukuLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="tglPeminjamanLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Keterlambatan" GridPane.rowIndex="6" />
+                        <Label fx:id="keterlambatanLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Nama Anggota" />
+                        <Label fx:id="namaAnggotaLabel" text="-" GridPane.columnIndex="1" />
+                        <Label text="Terakhir Pengembalian" GridPane.rowIndex="5" />
+                        <Label fx:id="tkrPengembalianLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <HBox alignment="CENTER_LEFT" layoutX="253.0" layoutY="250.0" prefHeight="34.0" prefWidth="267.0" spacing="10.0">
+                     <children>
+                        <JFXCheckBox fx:id="telatCheckbox" disable="true" text="Telat" />
+                        <JFXCheckBox fx:id="rusakCheckbox" text="Rusak" />
+                        <JFXCheckBox fx:id="hilangCheckbox" text="Hilang" />
+                        <JFXButton fx:id="simpanButton" disable="true" buttonType="RAISED" onAction="#actionHandle" style="-fx-background-color: #5c8ece;" text="Simpan" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="252.0" layoutY="356.0" prefHeight="18.0" prefWidth="256.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="135.0" text="Total Bayar Denda" />
+                        <Label fx:id="totalBayarLabel" alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="122.0" text="-" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

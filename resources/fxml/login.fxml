@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="perpustakaan.controllers.LoginController">
+    <children>
+        <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5C8ECE;">
+                    <children>
+                        <Text fill="WHITE" layoutX="378.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="378.19200134277344">
+                            <font>
+                                <Font name="Bebas Neue Bold" size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXTextField fx:id="username" focusColor="#5ca7d6" labelFloat="true" layoutX="332.0" layoutY="164.0" opacity="0.5" promptText="Username" />
+                  <JFXPasswordField fx:id="pass" focusColor="#5ca7d6" labelFloat="true" layoutX="332.0" layoutY="236.0" opacity="0.5" promptText="Password" />
+                  <JFXButton fx:id="butlogin" layoutX="444.0" layoutY="323.0" mnemonicParsing="false" onAction="#tekanLogin" style="-fx-background-color: #5C8ECE;" text="Login" textFill="WHITE" />
+                  <JFXButton fx:id="butbatallogin" layoutX="311.0" layoutY="323.0" mnemonicParsing="false" onAction="#batalLogin" style="-fx-background-color: #5C8ECE;" text="Batal" textFill="WHITE" />
+               </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" prefHeight="600.0" prefWidth="800.0" stylesheets="/css/bgGambar.css" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="perpustakaan.controllers.HomeController">
+   <children>
+      <GridPane layoutX="190.0" layoutY="99.0" prefHeight="402.0" prefWidth="453.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="99.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="158.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.0" minWidth="10.0" prefWidth="158.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="139.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton fx:id="butkun" onAction="#tekanKunjungan" prefHeight="175.0" prefWidth="125.0" styleClass="bodybg1" text=" " />
+            <JFXButton fx:id="butpem" onAction="#tekanPeminjaman" prefHeight="175.0" prefWidth="125.0" styleClass="bodybg2" text=" " GridPane.columnIndex="1" />
+            <JFXButton fx:id="butpeng" onAction="#tekanPengembalian" prefHeight="175.0" prefWidth="125.0" styleClass="bodybg3" text=" " GridPane.columnIndex="2" />
+            <JFXButton fx:id="buttambah" onAction="#tekanTambah" prefHeight="175.0" prefWidth="125.0" styleClass="bodybg4" text=" " GridPane.rowIndex="1" />
+            <JFXButton fx:id="butdata" onAction="#tekanData" prefHeight="175.0" prefWidth="125.0" styleClass="bodybg5" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXButton fx:id="butlap" onAction="#tekanLaporan" prefHeight="175.0" prefWidth="125.0" styleClass="bodybg6" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </GridPane>
+      <JFXButton fx:id="butlogout" buttonType="RAISED" layoutX="736.0" layoutY="526.0" onAction="#tekanLogout" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #5C8ECE;" styleClass="bodylogout" text=" " textFill="WHITE" />
+      <JFXButton fx:id="butinfo" buttonType="RAISED" layoutX="660.0" layoutY="526.0" onAction="#tekanInfo" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #5C8ECE;" styleClass="bodyinfo" text=" " />
+      <Text fill="#5c8ece" layoutX="94.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aplikasi Sistem Informasi Perpustakaan SDIT  Al - Hamidiyyah" textAlignment="CENTER" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.45703125">
+         <font>
+            <Font name="Lobster" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

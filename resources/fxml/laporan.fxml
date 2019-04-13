@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="/css/bgGambar.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="perpustakaan.controllers.LaporanController">
+    <children>
+        <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5C8ECE;">
+                    <children>
+                        <JFXButton fx:id="back" focusTraversable="false" layoutX="14.0" layoutY="16.0" onAction="#back" styleClass="bodyback" text=" " />
+                        <Text fill="WHITE" layoutX="41.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laporan" textAlignment="CENTER">
+                            <font>
+                                <Font name="Bebas Neue Bold" size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXDatePicker fx:id="dariDatePicker" defaultColor="#5c8ece" layoutX="216.0" layoutY="176.0" promptText="Dari" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="316.0"  />
+                  <HBox layoutX="181.0" layoutY="221.0" prefHeight="25.0" prefWidth="356.0" spacing="20.0">
+                     <children>
+                        <JFXCheckBox fx:id="anggotaCheckbox" text="Anggota" />
+                        <JFXCheckBox fx:id="bukuCheckbox" text="Buku" />
+                        <JFXCheckBox fx:id="peminjamanCheckbox" text="Peminjaman" />
+                        <JFXCheckBox fx:id="kunjunganCheckbox" text="Kunjungan" />
+                        <JFXCheckBox fx:id="dendaCheckbox" text="Denda" />
+                     </children>
+                  </HBox>
+                  <JFXButton buttonType="RAISED" layoutX="356.0" layoutY="274.0" onAction="#prosesLaporan" style="-fx-background-color: #5c8ece;" text="Proses" textFill="WHITE" AnchorPane.leftAnchor="356.0" AnchorPane.rightAnchor="380.0" />
+               </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
